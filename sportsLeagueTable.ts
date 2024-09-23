@@ -25,5 +25,30 @@ type TeamRow = {
   id: number;
   teamName: string;
   points: [ scored: number, allowed: number];
-  
+}
+
+type GameScore = [
+  teamAName: number,
+  teamBName: number,
+  teamAPoints: number,
+  teamBPoints: number
+]
+
+type ScoreTable = {
+  tableRow: TeamRow;
+}
+
+function keepScore(numberOfTeams: number, games:[GameScore[]]): ScoreTable {
+  let teamResults;
+
+  for(const match of games){
+    const teamAName = match[0];
+    const teamBName = match[1];
+    const teamAScore = match[3];
+    const teamBScore = match[4];
+
+  }
+
+
+  return teamResults;
 }
